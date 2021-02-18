@@ -222,10 +222,15 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
-}
+function carMaker(odometer) {
+  return {
+    odometer,
+    drive: function(distance){
+      this.odometer = this.odometer + distance;
+      return this.odometer;
+  }
+};
+};
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
