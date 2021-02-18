@@ -168,8 +168,14 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(arr, range) {
+  let rangedReviews = []  
+  for(let i = 0; i < arr.length; i++){
+      if(arr[i].rating >= (Math.floor(range)) && arr[i].rating < (Math.floor(range) + 1)){
+        rangedReviews.push(arr[i]);
+      }
+    };
+    return rangedReviews;
   }
 
   
